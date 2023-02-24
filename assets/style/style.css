@@ -9,8 +9,8 @@
     /* Gradient Colours */
     --clr-light-slate-blue: hsl(252, 100%, 67%);
     --clr-light-royal-blue: hsl(241, 81%, 54%);
-    --clr-violet-blue: hsla(256, 72%, 46%, 1);
-    --clr-persian-blue: hsla(241, 72%, 46%, 0);
+    --clr-violet-blue: hsla(256, 72%, 46%, 0.9);
+    --clr-persian-blue: hsla(241, 72%, 46%, 0.95);
 
     /* Neutral Colours */
     --clr-white: hsl(0, 0%, 100%);
@@ -20,7 +20,8 @@
 
     /* Gradients */
     --grad-light: linear-gradient(180deg, var(--clr-light-slate-blue) 0%, var(--clr-light-royal-blue) 100%);
-    --grad-dark: linear-gradient(180deg, var(--clr-persian-blue) 0%, var(--clr-violet-blue) 100%);
+    --grad-dark: linear-gradient(180deg, var(--clr-violet-blue) 0%, var(--clr-persian-blue) 100%);
+    --grad-dark-invert: linear-gradient(0, var(--clr-violet-blue) 0%, var(--clr-persian-blue) 100%);
 
     /* Font Families */
     --font-primary: 'Hanken Grotesk', sans-serif;
@@ -41,8 +42,8 @@
 }
 
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
-ul[role='list'],
-ol[role='list'] {
+ul,
+ol {
     list-style: none;
 }
 
@@ -64,6 +65,7 @@ body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     font-size: 1.8rem;
+    font-family: var(--font-primary);
 }
 
 /* A elements that don't have a class get default styles */
@@ -94,6 +96,55 @@ picture {
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.results {
+    max-width: 45rem;
+    width: 100%;
+    text-align: center;
+}
+
+.results_summary {
+    padding: 2rem 6rem 4rem;
+    background: var(--grad-dark);
+    border-bottom-left-radius: 4rem;
+    border-bottom-right-radius: 4rem;
+    color: var(--clr-light-lavender);
+}
+
+.results_summary__header h1 {
+    font-weight: 700;
+}
+
+.results_summary__score {
+    padding: 2rem;
+    border-radius: 50%;
+    background: var(--grad-dark-invert);
+    overflow: hidden;
+    width: 14.5rem;
+    height: 14.5rem;
+    margin: 2rem auto;
+}
+
+.results_summary__score_achieved {
+    color: var(--clr-white);
+    font-size: 6rem;
+    font-weight: 800;
+}
+
+.results_summary__score_available {
+    font-size: 1.5rem;
+}
+
+.results_summary__description_header {
+    color: var(--clr-white);
+    font-size: 2.5rem;
 }
 
 .attribution { 
