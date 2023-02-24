@@ -13,33 +13,75 @@
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
+<main>
+    <section class="results">
+        <section class="results_summary">
+            <header class="results_summary__header">
+                <h1>Your Result</h1>
+            </header>
+            <div class="results_summary__content">
+                <div class="results_summary__score">
+                    <div class="results_summary__score_achieved">76</span>
+                    <div class="results_summary__score_available">of 100</div>
+                </div>
+                <section class="results_summary__description">
+                    <header class="results_summary__description_header">
+                        Great
+                    </header>
+                    <div class="results_summar__description_text">
+                        <p>You scored higher than 65% of the people who have taken these tests.</p>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="results_breakdown">
+            <header class="results_breakdown__header">
+                <h2>Summary</h2>
+            </header>
+            <ul class="results_breakdown__list">
+                <li class="results_breakdown__list_item reaction">
+                    <span class="results_breakdown__list_icon"><img src="assets/images/icon-reaction.svg" alt="Reaction Icon"></span>
+                    <span class="results_breakdown__list_title">Reaction</span>
+                    <span class="results_breakdown__list_score">
+                        <span class="results_breakdown__list_score__achieved">80</span> /
+                        <span class="results_breakdown__list_score__available">100</span>
+                    </span>
+                </li>
+                <li class="results_breakdown__list_item memory">
+                    <span class="results_breakdown__list_icon"><img src="assets/images/icon-memory.svg" alt="Memory Icon"></span>
+                    <span class="results_breakdown__list_title">Memory</span>
+                    <span class="results_breakdown__list_score">
+                        <span class="results_breakdown__list_score__achieved">92</span> /
+                        <span class="results_breakdown__list_score__available">100</span>
+                    </span>
+                </li>
+                <li class="results_breakdown__list_item verbal">
+                    <span class="results_breakdown__list_icon"><img src="assets/images/icon-verbal.svg" alt="Verbal Icon"></span>
+                    <span class="results_breakdown__list_title">Verbal</span>
+                    <span class="results_breakdown__list_score">
+                        <span class="results_breakdown__list_score__achieved">61</span> /
+                        <span class="results_breakdown__list_score__available">100</span>
+                    </span>
+                </li>
+                <li class="results_breakdown__list_item visual">
+                    <span class="results_breakdown__list_icon"><img src="assets/images/icon-visual.svg" alt="Visual Icon"></span>
+                    <span class="results_breakdown__list_title">Visual</span>
+                    <span class="results_breakdown__list_score">
+                        <span class="results_breakdown__list_score__achieved">72</span> /
+                        <span class="results_breakdown__list_score__available">100</span>
+                    </span>
+                </li>
+            </ul>
 
-    Your Result
-    76
-    of 100
+            <button class="results_brekdown__continue btn btn__primary">Continue</button>
+        </section>
+    </section>
+</main>
 
-    Great
-    You scored higher than 65% of the people who have taken these tests.
-
-    Summary
-
-    Reaction
-    80 / 100
-
-    Memory
-    92 / 100
-
-    Verbal
-    61 / 100
-
-    Visual
-    72 / 100
-
-    Continue
-
-    <div class="attribution">
+<footer class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-    </div>
+    Coded by <a href="#">Dan Mahony</a>.
+</footer>
+
 </body>
 </html>
