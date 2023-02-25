@@ -263,6 +263,12 @@ h2 {
     color: var(--clr-white);
 }
 
+.btn__primary:hover {
+    background: var(--grad-dark);
+    cursor: pointer;
+    box-shadow: 2px 2px 5px rgba(100, 100, 100, 0.5);
+}
+
 .attribution { 
     margin-top: auto;
     font-size: 1.1rem; 
