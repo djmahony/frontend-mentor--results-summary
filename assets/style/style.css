@@ -120,47 +120,68 @@ main {
 }
 
 .results_summary {
-    padding: 2rem 6rem 4rem;
+    padding: 3.6rem 6rem 5rem;
     background: var(--grad-dark);
     border-bottom-left-radius: 4rem;
     border-bottom-right-radius: 4rem;
     color: var(--clr-light-lavender);
+    max-width: 44rem;
 }
 
 .results_summary__header h1 {
     font-weight: 700;
-    font-size: 2rem;
+    font-size: 2.4rem;
+    padding-bottom: 3rem;
 }
 
 .results_summary__score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     padding: 2rem;
     border-radius: 50%;
     background: var(--grad-dark-invert);
     overflow: hidden;
-    width: 14.5rem;
-    height: 14.5rem;
-    margin: 2rem auto;
+    width: 20rem;
+    height: 19rem;
+    margin: 0 auto;
 }
 
 .results_summary__score_achieved {
     color: var(--clr-white);
-    font-size: 6rem;
+    font-size: 7rem;
     font-weight: 800;
+    line-height: 1.2;
+    margin-top: 1.6rem;
 }
 
 .results_summary__score_available {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    line-height: 1.25;
+}
+
+.results_summary__description {
+    margin-top: 3.7rem;
 }
 
 .results_summary__description_header {
     color: var(--clr-white);
-    font-size: 2.5rem;
-    font-weight: 800;
+    font-size: 3.2rem;
+    font-weight: 500;
+    margin-bottom: 1.1rem;
+}
+
+.results_summary__description_text {
+    font-size: 1.8rem;
+    line-height: 1.35;
 }
 
 .results_breakdown {
-    padding: 3rem 4rem;
+    padding: 7rem 4rem 3rem;
+    margin-top: -4rem;
     text-align: left;
+    box-shadow: 0 5px 25px rgba(100, 100, 100, 0.2);
 }
 
 .results_breakdown__header {
@@ -168,11 +189,15 @@ main {
     margin-bottom: 2.5rem;
 }
 
+.results_breakdown__list {
+    padding-bottom:2.6rem;
+}
+
 .results_breakdown__list_item {
     display:flex;
-    padding: 1rem 2rem;
-    margin-bottom: 2rem;
-    border-radius: 1rem;
+    padding: 1.45rem 1.7rem;
+    margin-bottom: 1.5rem;
+    border-radius: 1.2rem;
 }
 
 .results_breakdown__list_icon {
@@ -225,6 +250,10 @@ main {
     color: var(--clr-dark-grey-blue);
 }
 
+h2 {
+    font-size: 2.4rem;
+}
+
 .btn__primary {
     width: 100%;
     padding: 1.5rem;
@@ -244,4 +273,34 @@ main {
 
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+/* 
+media queries revert to rem being based on the browser default rather than the value set in the html tag
+48rem = 48 * 16 (768px) based on the browser default value */
+@media (min-width: 48rem) {
+    .results {
+        max-width: 91rem;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    }
+
+    .results_summary {
+        width: 50%;
+        border-radius: 4rem;
+    }
+
+    .results_breakdown {
+        width: calc(50% + 4rem);
+        margin-left: -4rem;
+        margin-top: 0;
+        padding: 3.6rem 4rem 2rem 8rem;
+        border-top-right-radius: 4rem;
+        border-bottom-right-radius: 4rem;
+    }
+
+    .attribution {
+        margin-top: inherit;
+    }
 }
